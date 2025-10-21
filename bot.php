@@ -1,5 +1,5 @@
 <?php
-$botToken = "8322467682:AAEuxji6ftO45IEpU9Ge0BWw_omSWScKmxk"; // ← replace with your real token
+$botToken = getenv("BOT_TOKEN");
 $website = "https://api.telegram.org/bot".$botToken;
 
 $update = file_get_contents("php://input");
@@ -65,4 +65,5 @@ else {
     sendMessage($chatId, "Please send /start to begin again.");
 }
 ?>
+
 
